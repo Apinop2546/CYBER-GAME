@@ -121,3 +121,6 @@ dialog:has(.inventory-layout){width:min(780px,calc(100% - 24px))}
  #computer #terminal-form{padding:7px 9px;gap:5px}
  #computer #terminal-form button{min-height:34px}
 }
+.drop-marker{background:#fff6da;border:2px solid #efbb53;color:#46341b;box-shadow:0 5px 0 #9b6429,0 10px 24px #36271166;font-weight:700;z-index:2}
+.drop-marker img{width:31px;height:31px;object-fit:contain;filter:drop-shadow(0 2px 2px #7e581c55)}
+.drop-marker:focus-visible{outline:3px solid #1b86d1;outline-offset:3px}
