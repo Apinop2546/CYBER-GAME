@@ -1,4 +1,4 @@
-const CACHE='cyber-shift-office-v7.17.0';
+const CACHE='cyber-shift-office-v7.17.1';
 const FILES=["./", "./game.js", "./sim.js", "./workstation.js", "./terminal.js", "./Cyber-Shift-QR.png", "./workstation.css", "./index.html", "./world.js", "./icon-192.png", "./icon.svg", "./style-v4.css", "./manifest.webmanifest", "./app.js", "./icon-512.png", "./assets/items/lens.png", "./assets/items/patch.png", "./assets/items/shield.png", "./assets/items/scan.png", "./fonts/Kanit-Regular.ttf", "./fonts/OFL.txt", "./fonts/Kanit-Medium.ttf", "./vendor/THREE-LICENSE.txt", "./vendor/three.min.js"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('cyber-shift-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
